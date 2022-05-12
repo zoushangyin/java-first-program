@@ -265,7 +265,7 @@ public class Module2_Test {
 
             assertEquals(4, outputList.size(), "There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing best available rates (strictly in this order!)");
 
-            assertEquals("Enter your name", outputList.get(0));
+            assertEquals("Enter your name", outputList.get(0).replace("\n", "").replace("\r", ""));
             assertEquals("Hello " + name, outputList.get(1));
 
             assertEquals("Enter the loan term (in years)", outputList.get(2));
